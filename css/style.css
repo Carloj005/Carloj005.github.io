@@ -1,15 +1,15 @@
 /* ===== CSS VARIABLES ===== */
 :root {
     /* Vaporwave Color Palette */
-    --neon-purple: #B026FF;
+    --neon-purple: #A855F7;
     --neon-cyan: #00FFFF;
-    --neon-magenta: #FF00FF;
-    --neon-pink: #FF69B4;
+    --neon-magenta: #8B5CF6;
+    --neon-pink: #A855F7;
     --neon-green: #00FF41;
     --neon-red: #FF0040;
-    --vaporwave-pink: #FF1493;
+    --vaporwave-pink: #8B5CF6;
     --vaporwave-blue: #00BFFF;
-    --vaporwave-purple: #9932CC;
+    --vaporwave-purple: #A855F7;
     --vaporwave-cyan: #00FFFF;
     
     /* Background Colors */
@@ -19,31 +19,31 @@
     --bg-terminal: #0c0c0c;
     --bg-glass: rgba(0, 0, 0, 0.8);
     --bg-vaporwave: linear-gradient(135deg, #1a0033 0%, #0a0a0a 50%, #001122 100%);
-    --bg-card: rgba(255, 105, 180, 0.1);
+    --bg-card: rgba(168, 85, 247, 0.1);
     
     /* Gradients */
     --gradient-primary: linear-gradient(45deg, var(--vaporwave-pink), var(--vaporwave-purple));
     --gradient-secondary: linear-gradient(45deg, var(--vaporwave-cyan), var(--vaporwave-blue));
     
     /* Text Colors - More Vaporwave */
-    --text-primary: #FF69B4;
+    --text-primary: #A855F7;
     --text-secondary: #00FFFF;
-    --text-tertiary: #B026FF;
+    --text-tertiary: #8B5CF6;
     --text-muted: #333333;
     --text-error: #FF0040;
-    --text-vaporwave: #FF1493;
+    --text-vaporwave: #8B5CF6;
     
     /* Terminal Colors - Vaporwave Theme */
     --terminal-bg: #000000;
-    --terminal-border: #FF69B4;
-    --terminal-text: #FF69B4;
-    --terminal-prompt: #FF00FF;
+    --terminal-border: #A855F7;
+    --terminal-text: #A855F7;
+    --terminal-prompt: #8B5CF6;
     --terminal-command: #00FFFF;
     
     /* Reduced Glitch Colors */
-    --glitch-1: #FF69B4;
+    --glitch-1: #A855F7;
     --glitch-2: #00FFFF;
-    --glitch-3: #B026FF;
+    --glitch-3: #8B5CF6;
     
     /* Typography */
     --font-primary: 'JetBrains Mono', 'Fira Code', monospace;
@@ -1060,6 +1060,17 @@ body {
 .contact-section {
     padding: var(--space-xxl) 0;
     background: var(--bg-primary);
+}
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.contact-intro p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    font-weight: 500;
 }
 
 .social-links {

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carlo De Gregorio - Modern Portfolio featuring cybersecurity, gaming, photography, and creative projects">
+    <meta name="keywords" content="Carlo De Gregorio, cybersecurity, gaming, photography, videomaking, anime, Linux, music, portfolio">
+    <meta name="author" content="Carlo De Gregorio">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://claywhnsis.me">
+    <meta property="og:title" content="Carlo De Gregorio - Modern Portfolio">
+    <meta property="og:description" content="Explore my world of cybersecurity, gaming, photography, and creative projects">
+    <meta property="og:image" content="https://claywhnsis.me/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://claywhnsis.me">
+    <meta property="twitter:title" content="Carlo De Gregorio - Modern Portfolio">
+    <meta property="twitter:description" content="Explore my world of cybersecurity, gaming, photography, and creative projects">
+    <meta property="twitter:image" content="https://claywhnsis.me/assets/og-image.jpg">
+
+    <title>Carlo De Gregorio - Modern Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    
+    <!-- Google Fonts - Terminal/Monospace -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">CD</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link" data-section="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" data-section="about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="crt-overlay"></div>
+            <div class="scanlines"></div>
+            <div class="hero-background">
+                <div class="matrix-grid"></div>
+                <div class="glitch-elements">
+                    <div class="glitch-element" data-text="[SYSTEM_INIT]"></div>
+                    <div class="glitch-element" data-text="[LOADING...]"></div>
+                    <div class="glitch-element" data-text="[READY]"></div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-controls">
+                            <span class="control close"></span>
+                            <span class="control minimize"></span>
+                            <span class="control maximize"></span>
+                        </div>
+                        <div class="terminal-title">carlo@degregorio:~$</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="prompt">root@system:~$</span>
+                            <span class="command" id="typing-name">whoami</span>
+                        </div>
+                        <div class="terminal-output">
+                            <div class="hero-name" id="hero-name">
+                                <span class="name-glitch" data-text="Carlo">Carlo</span>
+                                <span class="name-glitch" data-text="De Gregorio">De Gregorio</span>
+                            </div>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">root@system:~$</span>
+                            <span class="command" id="typing-role">cat role.txt</span>
+                        </div>
+                        <div class="terminal-output">
+                            <p class="hero-tagline">
+                                <span class="tagline-text">[CYBER_SECURITY]</span>
+                                <span class="tagline-accent">& [DIGITAL_WARRIOR]</span>
+                            </p>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">root@system:~$</span>
+                            <span class="command" id="typing-desc">cat mission.txt</span>
+                        </div>
+                        <div class="terminal-output">
+                            <div class="hero-description">
+                                <p>Exploring the dark digital realm where technology meets chaos</p>
+                                <div class="ascii-art">
+                                    <pre>
+   ╔══════════════════════╗
+   ║  ⟨ SYSTEM BREACH ⟩   ║
+   ║    [ACCESSING...]    ║
+   ╚══════════════════════╝
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">root@system:~$</span>
+                            <span class="command">./connect</span>
+                            <span class="cursor">█</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/Carloj005" target="_blank" rel="noopener noreferrer" class="social-link terminal-link">
+                        <span class="link-prefix">[</span><i class="fab fa-github"></i><span class="link-suffix">GITHUB]</span>
+                    </a>
+                    <a href="https://www.instagram.com/carlodegregorio05/" target="_blank" rel="noopener noreferrer" class="social-link terminal-link">
+                        <span class="link-prefix">[</span><i class="fab fa-instagram"></i><span class="link-suffix">INSTA]</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@carlojtv" target="_blank" rel="noopener noreferrer" class="social-link terminal-link">
+                        <span class="link-prefix">[</span><i class="fab fa-tiktok"></i><span class="link-suffix">TIKTOK]</span>
+                    </a>
+                    <a href="https://www.youtube.com/@carlojtv6624" target="_blank" rel="noopener noreferrer" class="social-link terminal-link">
+                        <span class="link-prefix">[</span><i class="fab fa-youtube"></i><span class="link-suffix">TUBE]</span>
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span class="scroll-text">[SCROLL_DOWN]</span>
+                <div class="scroll-arrow">
+                    <span class="arrow-ascii">▼</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">Passionate about technology and creative expression</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="about-intro">
+                            <p>Welcome to my digital space! I'm Carlo De Gregorio, a tech enthusiast with a passion for exploring the cutting edge of digital culture and technology.</p>
+                        </div>
+                        <div class="about-details">
+                            <div class="about-item">
+                                <div class="about-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="about-text-content">
+                                    <h3>Cybersecurity</h3>
+                                    <p>Diving deep into the world of digital security, ethical hacking, and system protection.</p>
+                                </div>
+                            </div>
+                            <div class="about-item">
+                                <div class="about-icon">
+                                    <i class="fas fa-gamepad"></i>
+                                </div>
+                                <div class="about-text-content">
+                                    <h3>Gaming</h3>
+                                    <p>Exploring virtual worlds and the technology that brings them to life.</p>
+                                </div>
+                            </div>
+                            <div class="about-item">
+                                <div class="about-icon">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                                <div class="about-text-content">
+                                    <h3>Photography & Video</h3>
+                                    <p>Capturing moments and creating visual stories through the lens of creativity.</p>
+                                </div>
+                            </div>
+                            <div class="about-item">
+                                <div class="about-icon">
+                                    <i class="fab fa-linux"></i>
+                                </div>
+                                <div class="about-text-content">
+                                    <h3>Linux & Open Source</h3>
+                                    <p>Embracing the power of open-source technologies and Unix-like systems.</p>
+                                </div>
+                            </div>
+                            <div class="about-item">
+                                <div class="about-icon">
+                                    <i class="fas fa-music"></i>
+                                </div>
+                                <div class="about-text-content">
+                                    <h3>Music</h3>
+                                    <p>Immersed in the world of phonk, hardstyle, and techno - where rhythm meets technology.</p>
+                                </div>
+                            </div>
+                            <div class="about-item">
+                                <div class="about-icon">
+                                    <i class="fas fa-dragon"></i>
+                                </div>
+                                <div class="about-text-content">
+                                    <h3>Anime Culture</h3>
+                                    <p>Appreciating the art of storytelling, especially the dark fantasy world of Berserk.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Skills & Interests</h2>
+                    <p class="section-subtitle">A visual representation of my technical and creative pursuits</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="cybersecurity">
+                        <div class="skill-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="skill-name">Cybersecurity</h3>
+                        <p class="skill-description">Network security, ethical hacking, vulnerability assessment</p>
+                        <div class="skill-level">
+                            <div class="skill-bar" style="--level: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="gaming">
+                        <div class="skill-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3 class="skill-name">Gaming</h3>
+                        <p class="skill-description">Game analysis, streaming, competitive gaming</p>
+                        <div class="skill-level">
+                            <div class="skill-bar" style="--level: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="photography">
+                        <div class="skill-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3 class="skill-name">Photography</h3>
+                        <p class="skill-description">Digital photography, photo editing, visual storytelling</p>
+                        <div class="skill-level">
+                            <div class="skill-bar" style="--level: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="videomaking">
+                        <div class="skill-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3 class="skill-name">Video Production</h3>
+                        <p class="skill-description">Video editing, content creation, post-production</p>
+                        <div class="skill-level">
+                            <div class="skill-bar" style="--level: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="linux">
+                        <div class="skill-icon">
+                            <i class="fab fa-linux"></i>
+                        </div>
+                        <h3 class="skill-name">Linux</h3>
+                        <p class="skill-description">System administration, command line, server management</p>
+                        <div class="skill-level">
+                            <div class="skill-bar" style="--level: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="music">
+                        <div class="skill-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3 class="skill-name">Music Production</h3>
+                        <p class="skill-description">Phonk, hardstyle, techno - digital music creation</p>
+                        <div class="skill-level">
+                            <div class="skill-bar" style="--level: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Projects</h2>
+                    <p class="section-subtitle">Coming soon - showcasing my latest work and creations</p>
+                </div>
+                <div class="projects-content">
+                    <div class="projects-placeholder">
+                        <div class="placeholder-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Projects Coming Soon</h3>
+                        <p>I'm currently working on some exciting projects that will be featured here. Check back soon or follow my GitHub for updates!</p>
+                        <a href="https://github.com/Carloj005" target="_blank" rel="noopener noreferrer" class="github-link">
+                            <i class="fab fa-github"></i>
+                            View My GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="section-subtitle">Find me across the digital landscape</p>
+                </div>
+                <div class="contact-content">
+                    <div class="social-links">
+                        <a href="https://github.com/Carloj005" target="_blank" rel="noopener noreferrer" class="social-card">
+                            <div class="social-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="social-info">
+                                <h3>GitHub</h3>
+                                <p>@Carloj005</p>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/carlodegregorio05/" target="_blank" rel="noopener noreferrer" class="social-card">
+                            <div class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="social-info">
+                                <h3>Instagram</h3>
+                                <p>@carlodegregorio05</p>
+                            </div>
+                        </a>
+                        <a href="https://www.tiktok.com/@carlojtv" target="_blank" rel="noopener noreferrer" class="social-card">
+                            <div class="social-icon">
+                                <i class="fab fa-tiktok"></i>
+                            </div>
+                            <div class="social-info">
+                                <h3>TikTok</h3>
+                                <p>@carlojtv</p>
+                            </div>
+                        </a>
+                        <a href="https://www.youtube.com/@carlojtv6624" target="_blank" rel="noopener noreferrer" class="social-card">
+                            <div class="social-icon">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                            <div class="social-info">
+                                <h3>YouTube</h3>
+                                <p>@carlojtv6624</p>
+                            </div>
+                        </a>
+                        <a href="https://app.tvtime.com/user/55635402/" target="_blank" rel="noopener noreferrer" class="social-card">
+                            <div class="social-icon">
+                                <i class="fas fa-tv"></i>
+                            </div>
+                            <div class="social-info">
+                                <h3>TVTime</h3>
+                                <p>Watch History</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Carlo De Gregorio. All rights reserved.</p>
+                    <p>Built with passion for vaporwave aesthetics and modern web technologies.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home" class="footer-link">Home</a>
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#skills" class="footer-link">Skills</a>
+                    <a href="#projects" class="footer-link">Projects</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -4,11 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeLoading();
     initializeNavigation();
     initializeScrollEffects();
-    initializeAnimations();
+    initializeTerminalAnimations();
     initializeBackToTop();
     initializeSkillBars();
     initializeSmoothScrolling();
-    initializeParallax();
+    initializeGlitchEffects();
+    initializeMatrixEffects();
 });
 
 // ===== LOADING SCREEN =====
@@ -22,10 +23,166 @@ function initializeLoading() {
             // Remove from DOM after animation completes
             setTimeout(() => {
                 loadingScreen.remove();
+                // Start terminal animations after loading is complete
+                startTerminalSequence();
             }, 500);
         }, 1500); // Show loading for at least 1.5 seconds
     });
 }
+
+// ===== TERMINAL ANIMATIONS =====
+function initializeTerminalAnimations() {
+    // This will be called after loading screen disappears
+}
+
+function startTerminalSequence() {
+    const commands = [
+        { id: 'typing-name', delay: 1000 },
+        { id: 'typing-role', delay: 3000 },
+        { id: 'typing-desc', delay: 5000 }
+    ];
+    
+    commands.forEach(cmd => {
+        setTimeout(() => {
+            typeCommand(cmd.id);
+        }, cmd.delay);
+    });
+    
+    // Start name glitch effect after typing
+    setTimeout(() => {
+        startNameGlitch();
+    }, 2000);
+}
+
+function typeCommand(elementId) {
+    const element = document.getElementById(elementId);
+    if (!element) return;
+    
+    const originalText = element.textContent;
+    element.textContent = '';
+    element.classList.add('typing');
+    
+    let i = 0;
+    function type() {
+        if (i < originalText.length) {
+            element.textContent += originalText.charAt(i);
+            i++;
+            setTimeout(type, 100 + Math.random() * 100); // Variable typing speed
+        } else {
+            element.classList.remove('typing');
+            // Add cursor blink briefly
+            element.insertAdjacentHTML('afterend', '<span class="temp-cursor">█</span>');
+            setTimeout(() => {
+                const cursor = document.querySelector('.temp-cursor');
+                if (cursor) cursor.remove();
+            }, 1000);
+        }
+    }
+    
+    // Add typing sound effect simulation
+    setTimeout(type, 500);
+}
+
+function startNameGlitch() {
+    const nameElements = document.querySelectorAll('.name-glitch');
+    nameElements.forEach((element, index) => {
+        setTimeout(() => {
+            element.classList.add('active-glitch');
+        }, index * 500);
+    });
+}
+
+// ===== GLITCH EFFECTS =====
+function initializeGlitchEffects() {
+    // Random glitch effect on text elements
+    const glitchableElements = document.querySelectorAll('.nav-link, .section-title');
+    
+    glitchableElements.forEach(element => {
+        element.addEventListener('mouseenter', function() {
+            this.classList.add('glitch-hover');
+            setTimeout(() => {
+                this.classList.remove('glitch-hover');
+            }, 300);
+        });
+    });
+    
+    // Periodic random glitches
+    setInterval(() => {
+        const randomElement = glitchableElements[Math.floor(Math.random() * glitchableElements.length)];
+        if (randomElement) {
+            randomElement.classList.add('random-glitch');
+            setTimeout(() => {
+                randomElement.classList.remove('random-glitch');
+            }, 200);
+        }
+    }, 10000); // Every 10 seconds
+}
+
+// ===== MATRIX EFFECTS =====
+function initializeMatrixEffects() {
+    // Add matrix rain effect to background
+    const matrixGrid = document.querySelector('.matrix-grid');
+    if (matrixGrid) {
+        // Create matrix characters
+        const characters = '!@#$%^&*()_+-=[]{}|;:,.<>?01';
+        
+        function addMatrixChar() {
+            const char = document.createElement('div');
+            char.textContent = characters[Math.floor(Math.random() * characters.length)];
+            char.style.position = 'absolute';
+            char.style.left = Math.random() * 100 + '%';
+            char.style.top = '-20px';
+            char.style.color = 'rgba(0, 255, 65, 0.7)';
+            char.style.fontSize = '0.8rem';
+            char.style.fontFamily = 'var(--font-primary)';
+            char.style.animation = 'matrixFall 3s linear';
+            char.style.pointerEvents = 'none';
+            
+            matrixGrid.appendChild(char);
+            
+            setTimeout(() => {
+                char.remove();
+            }, 3000);
+        }
+        
+        // Add matrix chars periodically
+        setInterval(addMatrixChar, 500);
+    }
+}
+
+// Add matrix fall animation to CSS
+const matrixStyle = document.createElement('style');
+matrixStyle.textContent = `
+    @keyframes matrixFall {
+        to {
+            transform: translateY(100vh);
+            opacity: 0;
+        }
+    }
+    
+    .glitch-hover {
+        animation: quickGlitch 0.3s ease-in-out;
+    }
+    
+    .random-glitch {
+        animation: quickGlitch 0.2s ease-in-out;
+    }
+    
+    @keyframes quickGlitch {
+        0%, 100% { transform: translate(0, 0); }
+        20% { transform: translate(-2px, 1px); }
+        40% { transform: translate(2px, -1px); }
+        60% { transform: translate(-1px, 2px); }
+        80% { transform: translate(1px, -2px); }
+    }
+    
+    .typing::after {
+        content: '█';
+        animation: blink 1s infinite;
+        color: var(--neon-green);
+    }
+`;
+document.head.appendChild(matrixStyle);
 
 // ===== NAVIGATION =====
 function initializeNavigation() {
@@ -142,33 +299,19 @@ function initializeScrollEffects() {
 
 // ===== ANIMATIONS =====
 function initializeAnimations() {
-    // Typing animation for hero tagline
-    const taglineText = document.querySelector('.tagline-text');
-    if (taglineText) {
-        const originalText = taglineText.textContent;
-        taglineText.textContent = '';
-        
-        let i = 0;
-        function typeWriter() {
-            if (i < originalText.length) {
-                taglineText.textContent += originalText.charAt(i);
-                i++;
-                setTimeout(typeWriter, 100);
-            }
-        }
-        
-        setTimeout(typeWriter, 2000); // Start after other animations
-    }
+    // Terminal cursor blinking
+    const cursors = document.querySelectorAll('.cursor');
+    cursors.forEach(cursor => {
+        cursor.style.animation = 'blink 1s infinite';
+    });
 
-    // Floating animation for hero elements
-    const floatingElements = document.querySelectorAll('.floating-element');
-    floatingElements.forEach(element => {
-        element.addEventListener('mouseenter', function() {
-            this.style.animationPlayState = 'paused';
-        });
-        
-        element.addEventListener('mouseleave', function() {
-            this.style.animationPlayState = 'running';
+    // Glitch elements floating
+    const glitchElements = document.querySelectorAll('.glitch-element');
+    glitchElements.forEach((element, index) => {
+        element.addEventListener('animationend', function() {
+            // Restart animation with new text
+            const texts = ['[BREACH_DETECTED]', '[SYSTEM_COMPROMISED]', '[ACCESS_GRANTED]', '[FIREWALL_DOWN]', '[SCANNING...]'];
+            this.textContent = texts[Math.floor(Math.random() * texts.length)];
         });
     });
 }

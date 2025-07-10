@@ -19,6 +19,11 @@
     --bg-terminal: #0c0c0c;
     --bg-glass: rgba(0, 0, 0, 0.8);
     --bg-vaporwave: linear-gradient(135deg, #1a0033 0%, #0a0a0a 50%, #001122 100%);
+    --bg-card: rgba(255, 105, 180, 0.1);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(45deg, var(--vaporwave-pink), var(--vaporwave-purple));
+    --gradient-secondary: linear-gradient(45deg, var(--vaporwave-cyan), var(--vaporwave-blue));
     
     /* Text Colors - More Vaporwave */
     --text-primary: #FF69B4;

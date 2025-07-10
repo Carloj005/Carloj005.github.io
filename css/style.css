@@ -364,6 +364,17 @@ body {
         radial-gradient(circle at 40% 80%, rgba(255, 0, 255, 0.1) 0%, transparent 50%);
 }
 
+.hero-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
 .matrix-grid {
     position: absolute;
     top: 0;
@@ -1203,6 +1214,53 @@ body {
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .hero-section {
+        min-height: 100vh;
+        padding: 2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 70vh;
+        z-index: 10;
+        position: relative;
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .hero-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    
+    .terminal-window {
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+    
+    .hero-social {
+        position: relative;
+        z-index: 5;
+        margin-top: 2rem;
+    }
+    
     .nav-menu {
         position: fixed;
         top: 70px;
@@ -1215,7 +1273,8 @@ body {
         justify-content: center;
         align-items: center;
         transition: left var(--transition-medium);
-        border-right: 2px solid var(--neon-green);
+        border-right: 2px solid var(--vaporwave-pink);
+        z-index: 1000;
     }
 
     .nav-menu.active {
